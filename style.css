@@ -1,0 +1,43 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.person img{
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.person{
+  max-width: 150px;
+  
+}
+.person__info{
+  border: 1px solid #d2caca;
+  margin-top: -7px;
+  border-top:none;
+  border-radius: 2px;
+}
+.person__name{
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.person__name,
+.person__description,
+.motivator{
+  margin-left: 10px;
+}
+.motivator{
+  margin: 10px;
+  padding: 5px 10px;
+
+  border-radius: 5px;
+  border: none;
+  background-color: #2e7cf6;
+  color: #fff;
+}
+
