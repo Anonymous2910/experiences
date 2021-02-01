@@ -39,5 +39,9 @@ body{
   border: none;
   background-color: #2e7cf6;
   color: #fff;
+  cursor:pointer;
 }
+.motivator:active{
+  background-color: #fff;
+  color: #000;}
 
