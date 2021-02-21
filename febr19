@@ -1,0 +1,67 @@
+          //EX 1
+function isObject(value){
+    return typeof value === "object" && value !== null;
+  }
+  
+          // EX 2
+function aWithoutB (obj1, obj2) {
+    let newObj = {};
+    let array = Object.keys(obj2);
+    for (let key in obj1){
+        if (!array.includes(key)){
+            newObj[key] =  obj1[key];
+        }
+    }
+    return newObj;
+}
+
+          // EX 3
+function isEmptyObject(obj){
+    if (typeof obj !== "object") return ("this is not an object");
+    let oggetto = Object.keys(obj);
+    return oggetto.length === 0;
+}
+
+        //EX 4
+function isEqual (obj1, obj2){
+
+    let keys1 = Object.keys(obj1);
+    let keys2 = Object.keys(obj2);
+
+    if(keys1.length === keys2.length){
+        for ( let key of keys1 ){
+            if ( keys2.includes(key) ){
+                return true;
+            }
+        }   
+    } else {
+        return false;
+    }
+    
+}
+          //EX 5
+
+function intersections(objA, objB){
+    let newArray = [];
+    let array = Object.keys(objA);
+    let array2 = Object.keys(objB);
+    for (let key of array){
+        if( array2.includes(key)){
+            newArray.push(key);
+        }
+    }
+    return newArray;
+}
+          // EX 6
+function getValueByPath(obj, path){
+    let address = path.split("."),
+    i;
+    for( i = 0; i < address.length; i++){
+        if(obj[address[i]] == undefined){
+            return undefined;
+        } else {
+            obj= obj[address[i]];
+        }
+    }
+    return obj;
+}
