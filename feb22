@@ -1,0 +1,41 @@
+===FUNC THAT RETURNS ITS OWN NAME ======
+function returnName() {
+    return returnName.name;
+}
+
+===STORYTELLER===
+function tellAStory(...args) {
+    return ("hello there my friend.  " + args[0] + " how are you " + args[1] + " . It's been " + args[2] + " that we didnt see each other " + args[3]);
+}
+===SET TO DEFAULT ===
+function trialFunction(a, b, c, d = 2) {
+    return (a + b + c + d);
+}
+***
+function setToDefault(...arguments) {
+    const DEFAULT = 10;
+    let sum = 0;
+    let falsy = [false, NaN];
+    if (arguments.length === 0) {
+        return DEF;
+    }   
+    for (let i = 0; i < arguments.length; i++) {
+        for (let j = 0; j < falsy.length; j++) {
+            if (typeof arguments[i] !== "number" && arguments[i] !== falsy[j]) { //Huston we've got a problem.
+                arguments[i] = DEFAULT;
+            }
+        }
+        sum += arguments[i];
+    }
+    return sum;
+}
+===DYNAMIC FUNCTION===
+function dynamicFunc(...arguments){
+    switch(arguments.length){ 
+        case 5: return ("don't get too exhaused, huh? "); 
+        case 4: return (`${arguments[0]}-${arguments[1]}-${arguments[2]}-${arguments[3]}`);
+        case 3: return trialFunction();
+        case 2: if(typeof arguments[0]=== "number" && typeof arguments[1]==="number"){return arguments[0]* arguments[1];};
+        case 1: return (arguments[0]);
+    }
+}
