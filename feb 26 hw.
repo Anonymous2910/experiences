@@ -1,0 +1,48 @@
+function checkArray(x){
+  return Object.prototype.toString.call(x)=='[object Array]';
+}
+
+// clone an array
+function cloneArray(arr1,arr2){
+    arr1.forEach(function(value){
+        arr2.push(value);
+    })
+    return arr2;
+}
+
+//Create a function that will create an array made of length elements; fill elements with their indexes
+function createArrayOfLength(index){
+    let array = new Array(index);
+    for ( let i = 0; i < array.length; i++){
+        array[i] = i;
+    }
+    return array;
+}
+
+ //Create a function that will return last even element of the array
+let arr = [2,3,54,5,7,78,8,9,20];
+
+function lastEvenNum(args){
+    return args.reverse().find((elem) => elem % 2== 0);
+}
+
+//Write a function that will flatten an array without using flat()
+function flatten(args){
+    let newArray = [];
+    let elem = args.toString().split(",");
+    elem.forEach((element) =>{
+    if(+element){
+        newArray.push(element);
+    } else {
+        newArray.push(element);
+    }})
+    return newArray;
+}
+
+function shuffleArr (array){
+    for (let i = array.length - 1; i > 0; i--) {
+        const rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
+    return array;
+}
